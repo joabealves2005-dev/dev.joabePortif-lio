@@ -1,0 +1,23 @@
+{
+  "name": "joabe-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de Joabe Alves - Desenvolvedor de Software",
+  "main": "index-final.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o -f index-final.html",
+    "dev": "npx http-server . -p 3000 -o -f index-final.html",
+    "serve": "npx http-server . -p 8080 -o -f index-final.html"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "software",
+    "joabe",
+    "alves"
+  ],
+  "author": "Joabe Alves",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

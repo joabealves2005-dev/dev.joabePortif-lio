@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joabe - Desenvolvedor de Software | Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Joabe é um desenvolvedor de software especializado em desenvolvimento web, aplicativos e soluções digitais. Confira meu portfolio com projetos em React, Node.js, JavaScript e mais.">
+    <meta name="keywords" content="desenvolvedor, software, web development, React, Node.js, JavaScript, portfolio, programador, frontend, backend, fullstack">
+    <meta name="author" content="Joabe Alves">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Joabe - Desenvolvedor de Software | Portfolio">
+    <meta property="og:description" content="Desenvolvedor de software especializado em desenvolvimento web, aplicativos e soluções digitais. Confira meus projetos e entre em contato!">
+    <meta property="og:image" content="https://i.ibb.co/LzxkyhQ8/1000716272.png">
+    <meta property="og:url" content="https://joabealves.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Joabe Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joabe - Desenvolvedor de Software | Portfolio">
+    <meta name="twitter:description" content="Desenvolvedor de software especializado em desenvolvimento web, aplicativos e soluções digitais.">
+    <meta name="twitter:image" content="https://i.ibb.co/LzxkyhQ8/1000716272.png">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="msapplication-TileColor" content="#ff6b35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Joabe Portfolio">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://joabealves.dev">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joabe Alves",
+        "jobTitle": "Desenvolvedor de Software",
+        "description": "Desenvolvedor de software especializado em desenvolvimento web, aplicativos e soluções digitais",
+        "url": "https://joabealves.dev",
+        "image": "https://i.ibb.co/LzxkyhQ8/1000716272.png",
+        "email": "joabealves000@gmail.com",
+        "telephone": "+55-27-99915-9857",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Vitória",
+            "addressRegion": "ES",
+            "addressCountry": "BR"
+        },
+        "sameAs": [
+            "https://github.com/joabealves",
+            "y"
+        ],
+        "knowsAbout": [
+            "Desenvolvimento Web",
+            "JavaScript",
+            "React",
+            "Node.js",
+            "HTML5",
+            "CSS3",
+            "Git",
+            "Desenvolvimento de Aplicativos"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Desenvolvedor de Software",
+            "description": "Desenvolvimento de websites, aplicativos e soluções digitais"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+            color: #ffffff;
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: 0.3px;
+            cursor: none;
+            will-change: auto;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ff6b35, #ff8c42);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transition: transform 0.02s ease-out;
+            mix-blend-mode: difference;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            contain: layout style paint;
+        }
+
+        .custom-cursor.hover {
+            transform: scale(2);
+            transition: transform 0.05s ease-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #ffffff, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #ff6b35;
+        }
+
+                 .mobile-menu-btn {
+             display: none;
+             background: none;
+             border: none;
+             color: #ffffff;
+             font-size: 1.5rem;
+             cursor: pointer;
+             transition: color 0.3s ease;
+         }
+
+         .mobile-menu-btn:hover {
+             color: #ff6b35;
+         }
+
+         .mobile-nav {
+             display: none;
+             position: absolute;
+             top: 100%;
+             left: 0;
+             right: 0;
+             background-color: rgba(10, 10, 10, 0.98);
+             backdrop-filter: blur(10px);
+             border-top: 1px solid rgba(255, 255, 255, 0.1);
+             padding: 1rem 0;
+         }
+
+         .mobile-nav.active {
+             display: block;
+         }
+
+         .mobile-nav a {
+             display: block;
+             color: #ffffff;
+             text-decoration: none;
+             font-weight: 500;
+             padding: 0.8rem 2rem;
+             transition: all 0.3s ease;
+             border-left: 3px solid transparent;
+         }
+
+         .mobile-nav a:hover {
+             color: #ff6b35;
+             background-color: rgba(255, 107, 53, 0.1);
+             border-left-color: #ff6b35;
+         }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 140, 66, 0.1) 0%, transparent 50%);
+            animation: heroBackground 20s ease-in-out infinite;
+        }
+
+        @keyframes heroBackground {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-greeting {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #cccccc;
+            margin-bottom: 0.8rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .hero-greeting .dot {
+            color: #ff6b35;
+            margin-left: 0.8rem;
+            font-size: 1.8rem;
+        }
+
+        .hero-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+            position: relative;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .hero-name::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b35, #ff8c42);
+            border-radius: 2px;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2.5rem;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #ffffff, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out 1.1s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 1.4s both;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-block;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            color: #ffffff;
+            border-color: #ff6b35;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #e55a2b, #ff6b35);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ff6b35;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+                 /* Hero Image */
+         .hero-image {
+             position: relative;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 500px;
+             animation: fadeInRight 1s ease-out 1.7s both;
+         }
+
+         .hero-photo {
+             width: 350px;
+             height: 350px;
+             border-radius: 50%;
+             object-fit: cover;
+             position: relative;
+             z-index: 3;
+             box-shadow: 
+                 0 0 80px rgba(255, 107, 53, 0.4),
+                 0 0 40px rgba(255, 140, 66, 0.2),
+                 inset 0 0 20px rgba(255, 255, 255, 0.1);
+             border: 3px solid rgba(255, 107, 53, 0.3);
+             transition: all 0.3s ease;
+             filter: brightness(1.05) contrast(1.1);
+         }
+
+         .hero-photo::before {
+             content: '';
+             position: absolute;
+             top: -100px;
+             left: -100px;
+             right: -100px;
+             bottom: -100px;
+             border-radius: 50%;
+             background: radial-gradient(circle, 
+                 rgba(255, 107, 53, 0.15) 0%, 
+                 rgba(255, 140, 66, 0.1) 30%, 
+                 rgba(255, 107, 53, 0.05) 60%, 
+                 transparent 80%);
+             z-index: -1;
+             animation: pulse 4s infinite;
+             filter: blur(1px);
+         }
+
+         .hero-photo::after {
+             content: '';
+             position: absolute;
+             top: -20px;
+             left: -20px;
+             right: -20px;
+             bottom: -20px;
+             border-radius: 50%;
+             background: linear-gradient(45deg, 
+                 rgba(255, 107, 53, 0.2), 
+                 rgba(255, 140, 66, 0.1), 
+                 rgba(255, 107, 53, 0.2));
+             z-index: -1;
+             animation: rotate 8s linear infinite;
+         }
+
+         .hero-photo:hover {
+             transform: scale(1.05);
+             box-shadow: 
+                 0 0 100px rgba(255, 107, 53, 0.6),
+                 0 0 60px rgba(255, 140, 66, 0.3),
+                 inset 0 0 30px rgba(255, 255, 255, 0.15);
+             border-color: rgba(255, 107, 53, 0.5);
+             filter: brightness(1.1) contrast(1.15);
+         }
+
+         /* Geometric shapes around photo */
+         .geometric-shapes {
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             width: 400px;
+             height: 400px;
+             z-index: 2;
+         }
+
+         .shape {
+             position: absolute;
+             background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+             border: 1px solid rgba(255, 255, 255, 0.3);
+             backdrop-filter: blur(2px);
+             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+             will-change: transform, opacity;
+         }
+
+         .shape-1 {
+             width: 45px;
+             height: 35px;
+             top: 25%;
+             left: 15%;
+             clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
+             transform: rotate(-12deg);
+         }
+
+         .shape-2 {
+             width: 40px;
+             height: 25px;
+             top: 20%;
+             right: 20%;
+             clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+             transform: rotate(18deg);
+         }
+
+         .shape-3 {
+             width: 35px;
+             height: 30px;
+             bottom: 30%;
+             left: 10%;
+             clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+             transform: rotate(-20deg);
+         }
+
+         .shape-4 {
+             width: 42px;
+             height: 20px;
+             bottom: 25%;
+             right: 15%;
+             clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+             transform: rotate(25deg);
+         }
+
+         .shape-5 {
+             width: 30px;
+             height: 40px;
+             top: 55%;
+             left: 0%;
+             clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 85%);
+             transform: rotate(-8deg);
+         }
+
+         .shape-6 {
+             width: 28px;
+             height: 35px;
+             top: 50%;
+             right: 0%;
+             clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+             transform: rotate(12deg);
+         }
+
+         .shape-7 {
+             width: 25px;
+             height: 25px;
+             top: 35%;
+             left: 52%;
+             clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+             transform: rotate(40deg);
+         }
+
+         .shape-8 {
+             width: 20px;
+             height: 20px;
+             bottom: 40%;
+             left: 48%;
+             clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+             transform: rotate(-40deg);
+         }
+
+         /* Animations for shapes */
+         .shape-1 {
+             animation: float 6s ease-in-out infinite;
+         }
+
+         .shape-2 {
+             animation: float 6s ease-in-out infinite 0.5s;
+         }
+
+         .shape-3 {
+             animation: float 6s ease-in-out infinite 1s;
+         }
+
+         .shape-4 {
+             animation: float 6s ease-in-out infinite 1.5s;
+         }
+
+         .shape-5 {
+             animation: float 6s ease-in-out infinite 2s;
+         }
+
+         .shape-6 {
+             animation: float 6s ease-in-out infinite 2.5s;
+         }
+
+         .shape-7 {
+             animation: float 6s ease-in-out infinite 3s;
+         }
+
+         .shape-8 {
+             animation: float 6s ease-in-out infinite 3.5s;
+         }
+
+         @keyframes float {
+             0%, 100% {
+                 transform: translateY(0px) rotate(var(--rotation, 0deg));
+                 opacity: 0.2;
+             }
+             50% {
+                 transform: translateY(-5px) rotate(var(--rotation, 0deg));
+                 opacity: 0.4;
+             }
+         }
+
+         .shape-1 { --rotation: -12deg; }
+         .shape-2 { --rotation: 18deg; }
+         .shape-3 { --rotation: -20deg; }
+         .shape-4 { --rotation: 25deg; }
+         .shape-5 { --rotation: -8deg; }
+         .shape-6 { --rotation: 12deg; }
+         .shape-7 { --rotation: 40deg; }
+         .shape-8 { --rotation: -40deg; }
+
+         .hero-arrows {
+             position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             color: #888;
+             font-size: 2rem;
+             z-index: 3;
+             cursor: pointer;
+             transition: color 0.3s ease;
+         }
+
+         .hero-arrow-left {
+             left: -60px;
+         }
+
+         .hero-arrow-right {
+             right: -60px;
+         }
+
+         .hero-arrows:hover {
+             color: #ff6b35;
+         }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 80px 0;
+            background-color: #0f0f0f;
+        }
+
+        .skills-content {
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            color: #888;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid transparent;
+        }
+
+        .skill-item:hover {
+            color: #ff6b35;
+            transform: translateY(-3px);
+            border-color: rgba(255, 107, 53, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: #0a0a0a;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-left: 3px solid #ff6b35;
+            padding-left: 1rem;
+        }
+
+        .service-icon {
+            font-size: 1.5rem;
+            color: #ff6b35;
+        }
+
+        .service-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+                 .about-text h2 {
+             font-family: 'Space Grotesk', sans-serif;
+             font-size: 2.8rem;
+             font-weight: 700;
+             color: #ffffff;
+             margin-bottom: 2rem;
+             position: relative;
+             padding-left: 25px;
+             letter-spacing: 1px;
+         }
+
+         .about-text h2::before {
+             content: '';
+             position: absolute;
+             left: 0;
+             top: 50%;
+             transform: translateY(-50%);
+             width: 5px;
+             height: 50px;
+             background: linear-gradient(180deg, #ff6b35, #ff8c42);
+             border-radius: 3px;
+         }
+
+        .about-description {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 80px 0;
+            background-color: #0f0f0f;
+        }
+
+                 .projects h2 {
+             font-family: 'Space Grotesk', sans-serif;
+             font-size: 2.8rem;
+             font-weight: 700;
+             color: #ffffff;
+             margin-bottom: 3rem;
+             position: relative;
+             padding-left: 25px;
+             letter-spacing: 1px;
+         }
+
+         .projects h2::before {
+             content: '';
+             position: absolute;
+             left: 0;
+             top: 50%;
+             transform: translateY(-50%);
+             width: 5px;
+             height: 50px;
+             background: linear-gradient(180deg, #ff6b35, #ff8c42);
+             border-radius: 3px;
+         }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 66, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+            border-color: #ff6b35;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-content p {
+            color: #ccc;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+                 .tech-tag {
+             background-color: #ff6b35;
+             color: #ffffff;
+             padding: 0.3rem 0.8rem;
+             border-radius: 20px;
+             font-size: 0.8rem;
+             font-weight: 500;
+         }
+
+         .project-links {
+             display: flex;
+             gap: 0.8rem;
+             margin-top: 1rem;
+             flex-wrap: wrap;
+         }
+
+         .project-link {
+             padding: 0.6rem 1.2rem;
+             border-radius: 8px;
+             text-decoration: none;
+             font-size: 0.9rem;
+             font-weight: 600;
+             transition: all 0.3s ease;
+             display: flex;
+             align-items: center;
+             gap: 0.5rem;
+         }
+
+         .project-link.whatsapp {
+             background-color: #25D366;
+             color: #ffffff;
+         }
+
+         .project-link.whatsapp:hover {
+             background-color: #1ea952;
+             transform: translateY(-2px);
+             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+         }
+
+         .project-link.email {
+             background-color: #EA4335;
+             color: #ffffff;
+         }
+
+         .project-link.email:hover {
+             background-color: #d33b2c;
+             transform: translateY(-2px);
+             box-shadow: 0 4px 15px rgba(234, 67, 53, 0.3);
+         }
+
+         /* Contact Section */
+         .contact {
+             padding: 80px 0;
+             background-color: #0a0a0a;
+         }
+
+         .contact h2 {
+             font-family: 'Space Grotesk', sans-serif;
+             font-size: 2.8rem;
+             font-weight: 700;
+             color: #ffffff;
+             margin-bottom: 3rem;
+             text-align: center;
+             position: relative;
+             padding-left: 25px;
+         }
+
+         .contact h2::before {
+             content: '';
+             position: absolute;
+             left: 0;
+             top: 50%;
+             transform: translateY(-50%);
+             width: 5px;
+             height: 50px;
+             background: linear-gradient(180deg, #ff6b35, #ff8c42);
+             border-radius: 3px;
+         }
+
+         .contact-content {
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+             gap: 4rem;
+             align-items: start;
+         }
+
+         .contact-info {
+             display: flex;
+             flex-direction: column;
+             gap: 2rem;
+         }
+
+         .contact-item {
+             display: flex;
+             align-items: center;
+             gap: 1.5rem;
+             padding: 1.5rem;
+             background-color: #1a1a1a;
+             border-radius: 12px;
+             border: 1px solid rgba(255, 255, 255, 0.1);
+             transition: all 0.3s ease;
+         }
+
+         .contact-item:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+             border-color: #ff6b35;
+         }
+
+         .contact-icon {
+             font-size: 2rem;
+             width: 60px;
+             height: 60px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background: linear-gradient(45deg, #ff6b35, #ff8c42);
+             border-radius: 50%;
+             flex-shrink: 0;
+         }
+
+         .contact-details h3 {
+             font-size: 1.2rem;
+             font-weight: 600;
+             color: #ffffff;
+             margin-bottom: 0.5rem;
+         }
+
+         .contact-details p {
+             color: #ccc;
+             font-size: 1rem;
+         }
+
+         .contact-form {
+             background-color: #1a1a1a;
+             padding: 2rem;
+             border-radius: 12px;
+             border: 1px solid rgba(255, 255, 255, 0.1);
+         }
+
+         .form-group {
+             margin-bottom: 1.5rem;
+         }
+
+         .form-group input,
+         .form-group textarea {
+             width: 100%;
+             padding: 1rem;
+             border: 2px solid rgba(255, 255, 255, 0.1);
+             border-radius: 8px;
+             background-color: #0f0f0f;
+             color: #ffffff;
+             font-size: 1rem;
+             font-family: 'Poppins', sans-serif;
+             transition: all 0.3s ease;
+             -webkit-appearance: none;
+             -moz-appearance: none;
+             appearance: none;
+             box-sizing: border-box;
+             touch-action: manipulation;
+         }
+
+         .form-group input:focus,
+         .form-group textarea:focus {
+             outline: none;
+             border-color: #ff6b35;
+             box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+         }
+
+         .form-group input::placeholder,
+         .form-group textarea::placeholder {
+             color: #888;
+         }
+
+         .form-group textarea {
+             resize: vertical;
+             min-height: 120px;
+         }
+
+         /* Footer */
+         .footer {
+             background-color: #0f0f0f;
+             padding: 2rem 0;
+             border-top: 1px solid rgba(255, 255, 255, 0.1);
+         }
+
+         .footer-content {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             flex-wrap: wrap;
+             gap: 1rem;
+         }
+
+         .footer-text p {
+             color: #888;
+             font-size: 0.9rem;
+         }
+
+         .social-links {
+             display: flex;
+             gap: 1.5rem;
+         }
+
+         .social-link {
+             color: #888;
+             text-decoration: none;
+             font-weight: 500;
+             transition: color 0.3s ease;
+         }
+
+                 .social-link:hover {
+            color: #ff6b35;
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid #ff6b35;
+            outline-offset: 2px;
+        }
+
+        .btn:focus,
+        .nav a:focus,
+        .social-link:focus {
+            outline: 2px solid #ff6b35;
+            outline-offset: 2px;
+        }
+
+                 /* Responsive Design */
+         @media (max-width: 768px) {
+             /* Remover cursor personalizado no mobile */
+             .custom-cursor {
+                 display: none !important;
+             }
+             
+             body {
+                 cursor: auto !important;
+             }
+             
+             .nav {
+                 display: none;
+             }
+             
+             .mobile-menu-btn {
+                 display: block;
+             }
+             
+             .hero-content {
+                 grid-template-columns: 1fr;
+                 text-align: center;
+                 gap: 1rem;
+                 padding: 1rem 0;
+             }
+             
+             .hero-title {
+                 font-size: 2.2rem;
+                 margin-bottom: 0.5rem;
+             }
+             
+             .hero-name {
+                 font-size: 1.8rem;
+                 margin-bottom: 0.5rem;
+             }
+             
+             .hero-greeting {
+                 font-size: 1.5rem;
+                 margin-bottom: 0.5rem;
+             }
+             
+             .about-content {
+                 grid-template-columns: 1fr;
+                 gap: 1.5rem;
+             }
+             
+             .stats {
+                 grid-template-columns: 1fr;
+                 gap: 0.8rem;
+             }
+             
+             .skills-list {
+                 gap: 0.5rem;
+                 flex-wrap: wrap;
+                 justify-content: center;
+             }
+             
+             .skill-item {
+                 font-size: 0.9rem;
+                 padding: 0.4rem 0.8rem;
+                 margin: 0.2rem;
+             }
+             
+             .hero-buttons {
+                 justify-content: center;
+                 gap: 1rem;
+                 margin-top: 1rem;
+             }
+             
+             .hero-photo {
+                 width: 280px;
+                 height: 280px;
+                 margin: 1rem auto;
+             }
+
+             .hero-arrows {
+                 display: none;
+             }
+
+             .geometric-shapes {
+                 width: 250px;
+                 height: 250px;
+             }
+
+             .shape {
+                 opacity: 0.3;
+             }
+
+             .contact-content {
+                 grid-template-columns: 1fr;
+                 gap: 1.5rem;
+             }
+
+             .contact h2 {
+                 padding-left: 0;
+                 text-align: center;
+                 margin-bottom: 1rem;
+             }
+
+             .contact h2::before {
+                 display: none;
+             }
+
+             .footer-content {
+                 flex-direction: column;
+                 text-align: center;
+                 gap: 1rem;
+             }
+
+             /* Reduzir espaçamentos das seções */
+             .hero {
+                 padding: 2rem 0;
+             }
+
+             .about {
+                 padding: 2rem 0;
+             }
+
+             .skills {
+                 padding: 1.5rem 0;
+             }
+
+             .contact {
+                 padding: 2rem 0;
+             }
+
+             /* Melhorar formulário de contato */
+             .contact-form {
+                 margin-top: 1rem;
+             }
+
+             .form-group {
+                 margin-bottom: 1rem;
+             }
+
+             .form-group input,
+             .form-group textarea {
+                 font-size: 16px; /* Evita zoom no iOS */
+                 padding: 15px;
+                 border: 2px solid rgba(255, 255, 255, 0.2);
+                 background: rgba(255, 255, 255, 0.1);
+                 color: #ffffff;
+                 border-radius: 8px;
+                 width: 100%;
+                 box-sizing: border-box;
+                 -webkit-appearance: none;
+                 -moz-appearance: none;
+                 appearance: none;
+                 min-height: 50px;
+                 touch-action: manipulation;
+                 -webkit-tap-highlight-color: transparent;
+             }
+
+             .form-group input:focus,
+             .form-group textarea:focus {
+                 outline: none;
+                 border-color: #ff6b35;
+                 background: rgba(255, 255, 255, 0.15);
+             }
+
+             .form-group input::placeholder,
+             .form-group textarea::placeholder {
+                 color: rgba(255, 255, 255, 0.7);
+             }
+         }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+                margin-bottom: 0.3rem;
+            }
+            
+            .hero-name {
+                font-size: 1.4rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .hero-greeting {
+                font-size: 1.2rem;
+                margin-bottom: 0.3rem;
+            }
+            
+            .btn {
+                padding: 15px 30px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 300px;
+                min-height: 50px;
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+                         .hero-photo {
+                 width: 250px;
+                 height: 250px;
+                 margin: 1rem auto;
+             }
+
+            .geometric-shapes {
+                width: 300px;
+                height: 300px;
+            }
+
+            .skills-list {
+                gap: 0.3rem;
+            }
+
+            .skill-item {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+                margin: 0.1rem;
+            }
+
+            /* Reduzir ainda mais os espaçamentos */
+            .hero {
+                padding: 1.5rem 0;
+            }
+
+            .about {
+                padding: 1.5rem 0;
+            }
+
+            .skills {
+                padding: 1rem 0;
+            }
+
+            .contact {
+                padding: 1.5rem 0;
+            }
+
+            /* Melhorar seções de serviços */
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .service-item {
+                padding: 1.5rem;
+            }
+
+            .service-item h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .service-item p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+         <header class="header" role="banner">
+         <div class="header-content">
+             <a href="#home" class="logo" aria-label="Joabe - Página inicial">
+                 Joabe
+             </a>
+             
+             <nav class="nav" role="navigation" aria-label="Navegação principal">
+                 <a href="#home" aria-current="page">Home</a>
+                 <a href="#about">Sobre</a>
+                 <a href="#projects">Projetos</a>
+                 <a href="#contact">Contato</a>
+             </nav>
+             
+             <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileNav">
+                 <span aria-hidden="true">☰</span>
+             </button>
+         </div>
+         
+         <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Navegação mobile" aria-hidden="true">
+             <a href="#home" onclick="closeMobileMenu()">Home</a>
+             <a href="#about" onclick="closeMobileMenu()">Sobre</a>
+             <a href="#projects" onclick="closeMobileMenu()">Projetos</a>
+             <a href="#contact" onclick="closeMobileMenu()">Contato</a>
+         </nav>
+     </header>
+
+    <main>
+    <section id="home" class="hero" role="main" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-greeting">
+                        Olá.
+                        <span class="dot" aria-hidden="true">•</span>
+                    </h1>
+                    <h2 class="hero-name">Eu sou Joabe</h2>
+                    <h3 id="hero-title" class="hero-title">Desenvolvedor de Software</h3>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5527999159857?text=Olá! Gostaria de conversar sobre um projeto" class="btn btn-primary" aria-label="Entrar em contato via WhatsApp para discutir um projeto">
+                             Tem um projeto?
+                         </a>
+                        <a href="mailto:joabealves000@gmail.com?subject=Solicitação de Currículo" class="btn btn-secondary" aria-label="Solicitar currículo por email">
+                             Meu currículo
+                         </a>
+                    </div>
+                </div>
+                
+                 <div class="hero-image">
+                     <div class="hero-arrow-left hero-arrows">‹</div>
+                     <div class="geometric-shapes">
+                         <div class="shape shape-1"></div>
+                         <div class="shape shape-2"></div>
+                         <div class="shape shape-3"></div>
+                         <div class="shape shape-4"></div>
+                         <div class="shape shape-5"></div>
+                         <div class="shape shape-6"></div>
+                         <div class="shape shape-7"></div>
+                         <div class="shape shape-8"></div>
+                     </div>
+                     <img src="https://i.ibb.co/LzxkyhQ8/1000716272.png" alt="Joabe - Desenvolvedor de Software" class="hero-photo" loading="eager" width="350" height="350">
+                     <div class="hero-arrow-right hero-arrows">›</div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" aria-labelledby="skills-title">
+        <div class="container">
+            <div class="skills-content">
+                <h2 id="skills-title" class="sr-only">Tecnologias e Habilidades</h2>
+                <div class="skills-list" role="list" aria-label="Lista de tecnologias e habilidades">
+                    <span class="skill-item" role="listitem">HTML5</span>
+                    <span class="skill-item" role="listitem">CSS3</span>
+                    <span class="skill-item" role="listitem">JavaScript</span>
+                    <span class="skill-item" role="listitem">Node.js</span>
+                    <span class="skill-item" role="listitem">React</span>
+                    <span class="skill-item" role="listitem">Git</span>
+                    <span class="skill-item" role="listitem">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+        <div class="container">
+            <div class="about-content">
+                <div class="services">
+                    <div class="service-item">
+                        <span class="service-icon">&lt; /&gt;</span>
+                        <span class="service-text">Desenvolvimento de Websites</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">📱</span>
+                        <span class="service-text">Desenvolvimento de Apps</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">☁️</span>
+                        <span class="service-text">Hospedagem de Websites</span>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h2>Sobre mim</h2>
+                    <p class="about-description">
+                        Comecei minha jornada no desenvolvimento de software através da fotografia. 
+                        Através disso, aprendi a amar o processo de criar do zero. Desde então, 
+                        isso me levou ao desenvolvimento de software, pois satisfaz meu amor por 
+                        aprender e construir coisas.
+                    </p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projetos Concluídos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Satisfação do Cliente</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projetos</h2>
+            <div class="projects-grid">
+                                 <div class="project-card">
+                     <div class="project-image">
+                         E-commerce
+                     </div>
+                     <div class="project-content">
+                         <h3>E-commerce Platform</h3>
+                         <p>Plataforma completa de e-commerce com React e Node.js</p>
+                         <div class="project-tech">
+                             <span class="tech-tag">React</span>
+                             <span class="tech-tag">Node.js</span>
+                             <span class="tech-tag">MongoDB</span>
+                         </div>
+                         <div class="project-links">
+                             <a href="https://wa.me/5527999159857?text=Olá! Gostaria de saber mais sobre o projeto E-commerce Platform" class="project-link whatsapp">
+                                 📱 WhatsApp
+                             </a>
+                             <a href="mailto:joabealves000@gmail.com?subject=Interesse no projeto E-commerce Platform" class="project-link email">
+                                 ✉️ Email
+                             </a>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class="project-card">
+                     <div class="project-image">
+                         Task Manager
+                     </div>
+                     <div class="project-content">
+                         <h3>Task Management App</h3>
+                         <p>Aplicativo de gerenciamento de tarefas com interface moderna</p>
+                         <div class="project-tech">
+                             <span class="tech-tag">React</span>
+                             <span class="tech-tag">TypeScript</span>
+                             <span class="tech-tag">Firebase</span>
+                         </div>
+                         <div class="project-links">
+                             <a href="https://wa.me/5527999159857?text=Olá! Gostaria de saber mais sobre o projeto Task Management App" class="project-link whatsapp">
+                                 📱 WhatsApp
+                             </a>
+                             <a href="mailto:joabealves000@gmail.com?subject=Interesse no projeto Task Management App" class="project-link email">
+                                 ✉️ Email
+                             </a>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class="project-card">
+                     <div class="project-image">
+                         Portfolio
+                     </div>
+                     <div class="project-content">
+                         <h3>Portfolio Website</h3>
+                         <p>Website portfólio responsivo com design moderno</p>
+                         <div class="project-tech">
+                             <span class="tech-tag">HTML</span>
+                             <span class="tech-tag">CSS</span>
+                             <span class="tech-tag">JavaScript</span>
+                         </div>
+                         <div class="project-links">
+                             <a href="https://wa.me/5527999159857?text=Olá! Gostaria de saber mais sobre o projeto Portfolio Website" class="project-link whatsapp">
+                                 📱 WhatsApp
+                             </a>
+                             <a href="mailto:joabealves000@gmail.com?subject=Interesse no projeto Portfolio Website" class="project-link email">
+                                 ✉️ Email
+                             </a>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+         </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>joabealves000@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>+55 (27) 99915-9857</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Localização</h3>
+                            <p>Vitória, ES - Brasil</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" aria-labelledby="contact-title">
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required aria-describedby="name-help">
+                        <div id="name-help" class="sr-only">Digite seu nome completo</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Seu email" required aria-describedby="email-help">
+                        <div id="email-help" class="sr-only">Digite um endereço de email válido</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="sr-only">Assunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Assunto" required aria-describedby="subject-help">
+                        <div id="subject-help" class="sr-only">Digite o assunto da sua mensagem</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Mensagem</label>
+                        <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required aria-describedby="message-help"></textarea>
+                        <div id="message-help" class="sr-only">Digite sua mensagem aqui</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" aria-describedby="submit-help">Enviar Mensagem</button>
+                    <div id="submit-help" class="sr-only">Enviar mensagem via WhatsApp</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Joabe. Todos os direitos reservados.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/joabealves" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com/in/joabealves" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="https://wa.me/5527999159857" target="_blank" class="social-link">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </main>
+
+     <script>
+         function toggleMobileMenu() {
+             const mobileNav = document.getElementById('mobileNav');
+             const menuBtn = document.querySelector('.mobile-menu-btn');
+             const isOpen = mobileNav.classList.contains('active');
+             
+             mobileNav.classList.toggle('active');
+             menuBtn.setAttribute('aria-expanded', !isOpen);
+             mobileNav.setAttribute('aria-hidden', isOpen);
+             
+             // Focus management
+             if (!isOpen) {
+                 const firstLink = mobileNav.querySelector('a');
+                 if (firstLink) firstLink.focus();
+             }
+         }
+
+         function closeMobileMenu() {
+             const mobileNav = document.getElementById('mobileNav');
+             const menuBtn = document.querySelector('.mobile-menu-btn');
+             
+             mobileNav.classList.remove('active');
+             menuBtn.setAttribute('aria-expanded', 'false');
+             mobileNav.setAttribute('aria-hidden', 'true');
+             menuBtn.focus();
+         }
+
+         // Fechar menu ao clicar fora
+         document.addEventListener('click', function(event) {
+             const mobileNav = document.getElementById('mobileNav');
+             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+             
+             if (!mobileNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                 closeMobileMenu();
+             }
+         });
+
+         // Navegação por teclado
+         document.addEventListener('keydown', function(event) {
+             const mobileNav = document.getElementById('mobileNav');
+             const isMenuOpen = mobileNav.classList.contains('active');
+             
+             // ESC para fechar menu
+             if (event.key === 'Escape' && isMenuOpen) {
+                 closeMobileMenu();
+             }
+             
+             // Tab para navegar no menu mobile
+             if (isMenuOpen && event.key === 'Tab') {
+                 const focusableElements = mobileNav.querySelectorAll('a');
+                 const firstElement = focusableElements[0];
+                 const lastElement = focusableElements[focusableElements.length - 1];
+                 
+                 if (event.shiftKey && document.activeElement === firstElement) {
+                     event.preventDefault();
+                     lastElement.focus();
+                 } else if (!event.shiftKey && document.activeElement === lastElement) {
+                     event.preventDefault();
+                     firstElement.focus();
+                 }
+             }
+         });
+
+         // Smooth scroll para links de navegação
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+             anchor.addEventListener('click', function (e) {
+                 e.preventDefault();
+                 const target = document.querySelector(this.getAttribute('href'));
+                 if (target) {
+                     target.scrollIntoView({
+                         behavior: 'smooth',
+                         block: 'start'
+                     });
+                 }
+             });
+         });
+
+         // Formulário de contato
+         document.getElementById('contactForm').addEventListener('submit', function(e) {
+             e.preventDefault();
+             
+             const formData = new FormData(this);
+             const name = formData.get('name');
+             const email = formData.get('email');
+             const subject = formData.get('subject');
+             const message = formData.get('message');
+             
+             // Criar link do WhatsApp com a mensagem
+             const whatsappMessage = `Olá Joabe!%0A%0ANome: ${name}%0AEmail: ${email}%0AAssunto: ${subject}%0A%0AMensagem: ${message}`;
+             const whatsappUrl = `https://wa.me/5527999159857?text=${whatsappMessage}`;
+             
+             // Abrir WhatsApp
+             window.open(whatsappUrl, '_blank');
+             
+             // Mostrar mensagem de sucesso
+             showNotification('Mensagem enviada! Redirecionando para o WhatsApp...', 'success');
+             
+             // Limpar formulário
+             this.reset();
+         });
+
+         // Função para mostrar notificações
+         function showNotification(message, type = 'info') {
+             const notification = document.createElement('div');
+             notification.className = `notification notification-${type}`;
+             notification.textContent = message;
+             
+             // Estilos da notificação
+             notification.style.cssText = `
+                 position: fixed;
+                 top: 20px;
+                 right: 20px;
+                 background: ${type === 'success' ? '#25D366' : '#ff6b35'};
+                 color: white;
+                 padding: 1rem 1.5rem;
+                 border-radius: 8px;
+                 box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                 z-index: 10000;
+                 font-weight: 500;
+                 transform: translateX(100%);
+                 transition: transform 0.3s ease;
+             `;
+             
+             document.body.appendChild(notification);
+             
+             // Animar entrada
+             setTimeout(() => {
+                 notification.style.transform = 'translateX(0)';
+             }, 100);
+             
+             // Remover após 4 segundos
+             setTimeout(() => {
+                 notification.style.transform = 'translateX(100%)';
+                 setTimeout(() => {
+                     document.body.removeChild(notification);
+                 }, 300);
+             }, 4000);
+         }
+
+         // Animação de entrada dos elementos
+         const observerOptions = {
+             threshold: 0.1,
+             rootMargin: '0px 0px -50px 0px'
+         };
+
+         const observer = new IntersectionObserver((entries) => {
+             entries.forEach(entry => {
+                 if (entry.isIntersecting) {
+                     entry.target.style.opacity = '1';
+                     entry.target.style.transform = 'translateY(0)';
+                 }
+             });
+         }, observerOptions);
+
+         // Observar elementos para animação
+         document.addEventListener('DOMContentLoaded', function() {
+             const animatedElements = document.querySelectorAll('.service-item, .project-card, .contact-item, .contact-form, .skill-item');
+             
+             animatedElements.forEach(el => {
+                 el.style.opacity = '0';
+                 el.style.transform = 'translateY(30px)';
+                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                 observer.observe(el);
+             });
+         });
+
+                 // Detectar se é mobile
+         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+         
+         // Cursor personalizado ultra responsivo e otimizado (apenas desktop)
+         const cursor = document.querySelector('.custom-cursor');
+         let mouseX = 0, mouseY = 0;
+         let cursorX = 0, cursorY = 0;
+         let isAnimating = false;
+         let lastTime = 0;
+
+        // Throttle ultra responsivo - 120fps para máxima fluidez (apenas desktop)
+        if (!isMobile) {
+            document.addEventListener('mousemove', (e) => {
+                const now = performance.now();
+                if (now - lastTime >= 8) { // ~120fps para máxima responsividade
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    lastTime = now;
+                    
+                    if (!isAnimating) {
+                        isAnimating = true;
+                        requestAnimationFrame(animateCursor);
+                    }
+                }
+            });
+        }
+
+        function animateCursor() {
+            // Interpolação ultra responsiva - sem delay perceptível
+            const lerpFactor = 0.25; // Aumentado para 0.25 para resposta quase instantânea
+            cursorX += (mouseX - cursorX) * lerpFactor;
+            cursorY += (mouseY - cursorY) * lerpFactor;
+            
+            // Usar transform3d para aceleração por hardware máxima
+            cursor.style.transform = `translate3d(${cursorX - 10}px, ${cursorY - 10}px, 0)`;
+            
+            // Continuar animação com threshold menor para máxima precisão
+            if (Math.abs(mouseX - cursorX) > 0.1 || Math.abs(mouseY - cursorY) > 0.1) {
+                requestAnimationFrame(animateCursor);
+            } else {
+                isAnimating = false;
+            }
+        }
+
+         // Efeitos de hover no cursor (apenas desktop)
+         if (!isMobile) {
+             const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-item');
+             hoverElements.forEach(el => {
+                 el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                 el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+             });
+         }
+
+         // Sistema de partículas otimizado
+         const particles = [];
+         const maxParticles = 20;
+         
+         function createParticle() {
+             if (particles.length >= maxParticles) return;
+             
+             const GRparticle = document.createElement('div');
+             particle.style.cssText = `
+                 position: fixed;
+                 width: 2px;
+                 height: 2px;
+                 background: #ff6b35;
+                 border-radius: 50%;
+                 pointer-events: none;
+                 z-index: 1;
+                 opacity: 0.3;
+                 will-change: transform, opacity;
+                 transform: translate3d(${Math.random() * window.innerWidth}px, ${window.innerHeight}px, 0);
+                 animation: particleFloat 10s linear forwards;
+             `;
+             
+             document.body.appendChild(particle);
+             particles.push(particle);
+             
+             setTimeout(() => {
+                 const index = particles.indexOf(particle);
+                 if (index > -1) {
+                     particles.splice(index, 1);
+                 }
+                 if (particle.parentNode) {
+                     document.body.removeChild(particle);
+                 }
+             }, 10000);
+         }
+
+         // Criar partículas com throttling
+         let particleTimer = 0;
+         function updateParticles(timestamp) {
+             if (timestamp - particleTimer > 2000) {
+                 createParticle();
+                 particleTimer = timestamp;
+             }
+             requestAnimationFrame(updateParticles);
+         }
+         requestAnimationFrame(updateParticles);
+
+         // Adicionar animação de partículas
+         const style = document.createElement('style');
+         style.textContent = `
+             @keyframes particleFloat {
+                 0% {
+                     transform: translateY(0) rotate(0deg);
+                     opacity: 0.3;
+                 }
+                 50% {
+                     opacity: 0.8;
+                 }
+                 100% {
+                     transform: translateY(-100vh) rotate(360deg);
+                     opacity: 0;
+                 }
+             }
+         `;
+         document.head.appendChild(style);
+
+         // Melhorar interação touch no mobile
+         if (isMobile) {
+             // Adicionar feedback visual para toques
+             document.addEventListener('touchstart', function(e) {
+                 const target = e.target.closest('button, a, .btn, input, textarea');
+                 if (target) {
+                     target.style.transform = 'scale(0.95)';
+                     target.style.transition = 'transform 0.1s ease';
+                 }
+             });
+
+             document.addEventListener('touchend', function(e) {
+                 const target = e.target.closest('button, a, .btn, input, textarea');
+                 if (target) {
+                     setTimeout(() => {
+                         target.style.transform = 'scale(1)';
+                     }, 100);
+                 }
+             });
+
+             // Melhorar foco em inputs
+             document.querySelectorAll('input, textarea').forEach(input => {
+                 input.addEventListener('focus', function() {
+                     this.style.transform = 'scale(1.02)';
+                     this.style.transition = 'transform 0.2s ease';
+                 });
+
+                 input.addEventListener('blur', function() {
+                     this.style.transform = 'scale(1)';
+                 });
+             });
+         }
+     </script>
+ </body>
+ </html>
