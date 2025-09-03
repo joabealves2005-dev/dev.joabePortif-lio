@@ -1062,23 +1062,26 @@
              margin-bottom: 1.5rem;
          }
 
-         .form-group input,
-         .form-group textarea {
-             width: 100%;
-             padding: 1rem;
-             border: 2px solid rgba(255, 255, 255, 0.1);
-             border-radius: 8px;
-             background-color: #0f0f0f;
-             color: #ffffff;
-             font-size: 1rem;
-             font-family: 'Poppins', sans-serif;
-             transition: all 0.3s ease;
-             -webkit-appearance: none;
-             -moz-appearance: none;
-             appearance: none;
-             box-sizing: border-box;
-             touch-action: manipulation;
-         }
+                 .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background-color: #0f0f0f;
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            box-sizing: border-box;
+            touch-action: manipulation;
+            user-select: text;
+            -webkit-user-select: text;
+            -webkit-tap-highlight-color: rgba(255, 107, 53, 0.2);
+        }
 
          .form-group input:focus,
          .form-group textarea:focus {
@@ -1309,7 +1312,9 @@
                  appearance: none;
                  min-height: 50px;
                  touch-action: manipulation;
-                 -webkit-tap-highlight-color: transparent;
+                 -webkit-tap-highlight-color: rgba(255, 107, 53, 0.2);
+                 user-select: text;
+                 -webkit-user-select: text;
              }
 
              .form-group input:focus,
@@ -1317,6 +1322,8 @@
                  outline: none;
                  border-color: #ff6b35;
                  background: rgba(255, 255, 255, 0.15);
+                 transform: scale(1.02);
+                 box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
              }
 
              .form-group input::placeholder,
@@ -1992,9 +1999,9 @@
 
          // Melhorar interação touch no mobile
          if (isMobile) {
-             // Adicionar feedback visual para toques
+             // Adicionar feedback visual para toques (apenas botões)
              document.addEventListener('touchstart', function(e) {
-                 const target = e.target.closest('button, a, .btn, input, textarea');
+                 const target = e.target.closest('button, a, .btn');
                  if (target) {
                      target.style.transform = 'scale(0.95)';
                      target.style.transition = 'transform 0.1s ease';
@@ -2002,7 +2009,7 @@
              });
 
              document.addEventListener('touchend', function(e) {
-                 const target = e.target.closest('button, a, .btn, input, textarea');
+                 const target = e.target.closest('button, a, .btn');
                  if (target) {
                      setTimeout(() => {
                          target.style.transform = 'scale(1)';
@@ -2010,15 +2017,36 @@
                  }
              });
 
-             // Melhorar foco em inputs
+             // Melhorar foco em inputs - garantir que o teclado abra
              document.querySelectorAll('input, textarea').forEach(input => {
+                 // Remover qualquer bloqueio de seleção
+                 input.style.userSelect = 'text';
+                 input.style.webkitUserSelect = 'text';
+                 input.style.webkitTouchCallout = 'default';
+                 
+                 // Adicionar evento de toque para garantir foco
+                 input.addEventListener('touchstart', function(e) {
+                     e.stopPropagation();
+                     this.focus();
+                 });
+                 
                  input.addEventListener('focus', function() {
                      this.style.transform = 'scale(1.02)';
                      this.style.transition = 'transform 0.2s ease';
+                     this.style.borderColor = '#ff6b35';
+                     this.style.boxShadow = '0 0 0 3px rgba(255, 107, 53, 0.2)';
                  });
 
                  input.addEventListener('blur', function() {
                      this.style.transform = 'scale(1)';
+                     this.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                     this.style.boxShadow = 'none';
+                 });
+                 
+                 // Garantir que o input seja clicável
+                 input.addEventListener('click', function(e) {
+                     e.stopPropagation();
+                     this.focus();
                  });
              });
          }
